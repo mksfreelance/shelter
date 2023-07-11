@@ -1,0 +1,238 @@
+@import '../components/buttons';
+@import '../components/utils';
+@import '../components/fonts';
+@import '../components/modificators';
+
+.pet__header {
+  display: flex;
+  max-width: 100%;
+  height: 60px;
+  margin-top: 31px;
+  justify-content: space-between;
+  color: $color-dark-l;
+  position: relative;
+  z-index: 2;
+}
+
+.pet__header__logo {
+  text-decoration: none;
+
+  @include vp-375 {
+    padding-left: 10px;
+  }
+}
+
+.pet__header__logo:hover {
+  text-decoration: none;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.pet__header__logo-title {
+  color: $color-dark-l;
+  font-family: "Georgia-400-regular";
+  letter-spacing: 0.06em;
+  font-size: 32px;
+  line-height: 110%;
+  margin: 0;
+}
+
+.pet__header__logo-subtitle {
+  color: $color-dark-3xl;
+  font-family: "Arial-400-regular";
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 9px;
+  margin-left: 4px;
+}
+
+.pet__header__nav {
+  display: flex;
+  margin-top: -1px;
+  margin-right: 10px;
+
+  @include vp-768 {
+    display: none;
+  }
+}
+
+.pet__header__nav>a {
+  margin-top: 16px;
+  font-family: 'Arial-400-regular';
+  font-size: 15px;
+  line-height: 160%;
+  transition: all .3s ease-in-out;
+  text-decoration: none;
+  color: $color-dark-l;
+}
+
+.pet__header__nav>a:not(:last-child) {
+  margin-right: 36px;
+}
+
+.pet__header__nav>a:hover {
+  cursor: pointer;
+  color: $color-dark-3xl;
+}
+
+.nav-active-black {
+  position: relative;
+  pointer-events: none;
+  color: $color-dark-3xl;
+}
+
+.nav-active-black::after {
+  display: block;
+  content: '';
+  height: 3px;
+  background-color: $color-primary;
+  bottom: 0;
+  left: 0;
+}
+
+.pet__friends {
+  display: flex;
+  flex-direction: column;
+  height: 1342px;
+  background-color: $color-light-l;
+  margin-top: 101px;
+  position: relative;
+
+  @include vp-1279 {
+    height: 1733px;
+    margin-top: 124px;
+  }
+
+  @include vp-768 {}
+
+  @include vp-375 {
+    height: 1649px;
+  }
+}
+
+.pet__friends__container {
+  display: grid;
+  justify-items: center;
+  padding-right: 38px;
+  padding-top: 2px;
+
+  @include vp-1279 {
+    padding-right: 28px;
+    height: 1365px;
+    overflow: hidden;
+  }
+
+  @include vp-768 {
+    height: 1382px;
+  }
+
+  @include vp-375 {
+    height: 1378px;
+  }
+}
+
+.pet__swiper-slide {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 40px;
+  margin-top: 23px;
+
+  @include vp-1279 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+  }
+
+  @include vp-768 {}
+
+  @include vp-375 {
+    grid-template-columns: 1fr;
+    gap: 30px 40px;
+    margin-top: 35px;
+    margin-left: 20px;
+  }
+}
+
+.pet__friends__container-title {
+  font-family: 'Georgia-400-regular';
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+  padding-bottom: 36px;
+  padding-top: 80px;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 2px;
+
+  @include vp-1279 {
+    padding-bottom: 6px;
+  }
+
+
+
+  @include vp-375 {
+    font-size: 25px;
+    padding-top: 42px;
+  }
+}
+
+.pet__friends__container-card {
+  max-width: 270px;
+  height: 435px;
+  border-radius: 9px;
+  background-color: $color-light-s;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+
+}
+
+.pet__friends__container-card:hover {
+  background-color: $color-light-s;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  cursor: pointer;
+}
+
+.pet__friends__container-card:hover .btn-secondary {
+  background-color: $color-primary;
+}
+
+.pet__friends__container-card-name {
+  font-family: 'Georgia-400-regular';
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+  margin: 30px auto;
+}
+
+.btn-secondary {
+  background: none;
+  margin-top: -2px;
+}
+
+.pagination {
+  display: flex;
+  gap: 18px;
+  margin: 59px auto;
+
+  @include vp-1279 {
+    margin: 62px auto;
+  }
+
+  @include vp-768 {
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  @include vp-375 {
+    gap: 8px;
+    margin: 0 auto;
+    margin-left: 9px;
+    margin-top: 63px;
+  }
+}

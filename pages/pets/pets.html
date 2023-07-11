@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pets</title>
+  <link rel="icon" href="../../assets/icon-sleeping-area.svg" type="image/svg+xml">
+  <link href="../../main.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="container pet">
+      <div class="pet__header">
+        <a class="pet__header__logo" href="../../index.html">
+          <h1 class="pet__header__logo-title">Cozy House</h1>
+          <div class="pet__header__logo-subtitle">Shelter for pets in Boston</div>
+        </a>
+        <nav class="pet__header__nav">
+          <a class="pet__header__nav-about" href="../../index.html">About the shelter</a>
+          <a class="pet__header__nav-our-pets nav-active-black " href="#">Our pets</a>
+          <a class="pet__header__nav-help " href="../../index.html#help">Help the shelter</a>
+          <a class="pet__header__nav-contacts " href="#contacts">Contacts</a>
+        </nav>
+        <div class="header__burger__btn pet-burger">
+          <span class="burger__line pet-line-black"></span>
+          <span class="burger__line pet-line-black"></span>
+          <span class="burger__line pet-line-black"></span>
+        </div>
+      </div>
+      <button class="pet__header__btn">
+        <span class="visually-hidden">Open menu</span>
+      </button>
+    </div>
+  </header>
+  <main class="main-pet">
+    <section class="pet__friends" id="friends">
+      <h3 class="pet__friends__container-title">Our friends who <br>are looking for a house</h3>
+      <div class="container pet__friends__container ">
+        <div class="swiper">
+          <div class="pet__friends__container-carusel-wp swiper-wrapper">
+            <div class="pet__swiper-slide swiper-slide">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pagination">
+        <button type="button" class="pagination-btn-pets" disabled>&lt;&lt;</button>
+        <button type="button" class="pagination-btn-pets" disabled>&lt;</button>
+        <button type="button" class="pagination-btn-pets current-btn">1</button>
+        <button type="button" class="pagination-btn-pets">&gt;</button>
+        <button type="button" class="pagination-btn-pets">&gt;&gt;</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mt-0 pet-footer" id="contacts">
+    <div class="footer__container container  pr-20">
+      <div class="footer__container-wp footer__pet-wp">
+        <div class="footer__container-contacts">
+          <h3 class="footer__container-contacts-title">For questions <br class="xuy"> and suggestions</h3>
+          <div class="footer__container-contacts-wp ">
+            <img class="footer__container-mail-icon" src="../../assets/icon-email.svg" alt="phone icon">
+            <a class="footer__container-mailto" href="mailto:email@shelter.com">email@shelter.com</a>
+          </div>
+          <div class="footer__container-contacts-wp">
+            <img class="footer__container-tel-icon" src="../../assets/phone.png" alt="phone icon">
+            <a class="footer__container-phone" href="tel:+136745677554">+13 674 567 75 54</a>
+          </div>
+        </div>
+        <div class="footer__container-visit">
+          <h3 class="footer__container-visit-title">We are waiting<br class="xuy"> for your visit</h3>
+          <div class="footer__container-visit-address">
+            <img class="footer__container-map-icon" src="../../assets/pin.png" alt="map pin">
+            <a href="https://goo.gl/maps/T4EKZXZKuG5vjus77" target="_blank" class="footer__container-address-text">1
+              Central Street,
+              Boston <br>(entrance from the store)</a>
+          </div>
+          <div class="footer__container-visit-address address-second">
+            <img class="footer__container-map-icon" src="../../assets/pin.png" alt="map pin">
+            <a href="https://goo.gl/maps/MieFyvZ1GHxyyGQW8" target="_blank" class="footer__container-address-text">18
+              South Park, London
+            </a>
+          </div>
+        </div>
+        <div class="footer__container-img">
+          <img class="footer__container-footer-puppy" src="../../assets/footer-puppy.png" alt="footer-puppy">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal modal-close-js">
+    <div class="modal__wrapper">
+      <picture>
+        <img class="modal__image" src="" alt="" width="500" height="500">
+      </picture>
+    </div>
+    <div class="modal__wrapper">
+      <!-- <div> -->
+        <h2 class="modal__title"></h2>
+        <p class="modal__subtitle"></p>
+        <p class="modal__description"></p>
+        <ul>
+          <li>Age: <span class="modal__age"></span></li>
+          <li>Inoculations: <span class="modal__inoculations"></span></li>
+          <li>Diseases: <span class="modal__diseases"></span></li>
+          <li>Parasites: <span class="modal__parasites"></span></li>
+        </ul>
+      </div>
+    <!-- </div> -->
+    <div class="modal__close-button" width="12" height="12">
+      <div class="close"></div>
+      <span class="visually-hidden">Close popup.</span>
+    </div>
+  </div>
+  <div class="blackout"></div>
+
+  <template id="pet-card-temlate">
+    <div class="friends__container-card swiper-slide" data-id="">
+      <img src="" alt="">
+      <div class="friends__container-card-name"></div>
+      <button class="friends__container-card-btn btn-secondary">Learn more</button>
+    </div>
+  </template>
+
+  <script src="./pets.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+@import '../components/buttons';
+@import '../components/utils';
+@import '../components/fonts';
+@import '../components/modificators';
+
+.footer {
+  display: flex;
+  height: 350px;
+  background: url(./assets/noise_transparent.png),
+    radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  position: relative;
+
+  @include vp-1279 {
+    margin-top: -2px;
+    height: auto;
+  }
+
+  @include vp-768 {
+    margin-top: 0px;
+  }
+
+  @include vp-375 {
+    height: 807px;
+  }
+
+}
+
+.pet-footer {
+  @include vp-375 {
+    margin-left: -21px;
+  }
+}
+
+.footer__container {
+  margin-top: 0;
+
+  @include vp-375 {
+    padding: 0;
+
+  }
+}
+
+.footer__container-wp {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "contacts visit puppy";
+  margin-top: 42px;
+  column-gap: 150px;
+
+  @include vp-1279 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "contacts visit"
+      "puppy puppy";
+    justify-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    column-gap: 82px;
+    margin-left: 1px;
+  }
+
+  @include vp-768 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "contacts"
+      " visit""puppy";
+  }
+
+  @include vp-375 {
+    margin-left: -1px;
+    margin-top: 15px;
+  }
+}
+
+.footer__pet-wp {
+  margin-left: -10px;
+  margin-top: 40px;
+
+  @include vp-1279 {
+    margin-left: -8px;
+    margin-top: 15px;
+  }
+  @include vp-375 {
+    margin-left: 30px;
+
+  }
+}
+
+.footer__container-contacts {
+  grid-area: contacts;
+
+  @include vp-1279 {
+    min-width: 280px;
+  }
+
+  @include vp-768 {}
+
+  @include vp-320 {}
+}
+
+.footer__container-visit {
+  grid-area: visit;
+  margin-left: -11px;
+  margin-top: 40px;
+  column-gap: 150px;
+
+  @include vp-1279 {
+    margin-left: -25px;
+    min-width: 302px;
+  }
+
+  @include vp-768 {
+    margin-left: 0px;
+
+  }
+
+  @include vp-320 {}
+}
+
+.footer__container-contacts,
+.footer__container-visit {
+  margin-top: 16px;
+}
+
+.footer__container-img {
+  grid-area: puppy;
+  display: flex;
+  justify-content: end;
+
+
+  @include vp-1279 {
+    margin-top: 66px;
+  }
+
+  @include vp-768 {
+    margin-top: 41px;
+  }
+
+  @include vp-375 {
+    margin-top: 40px;
+    width: 260px;
+    height: 269px;
+  }
+}
+
+.footer__container-contacts-title,
+.footer__container-visit-title {
+  font-family: 'Georgia-400-regular';
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $color-white;
+  margin-top: 0px;
+}
+
+.footer__container-visit-address {
+  @include vp-768 {
+    margin-left: -7px;
+    margin-top: 39px;
+    min-width: 300px;
+  }
+}
+
+.footer__container-contacts-wp,
+.footer__container-visit-address {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @include vp-768 {
+    justify-content: center;
+  }
+}
+
+.footer__container-contacts-title {
+  margin-bottom: 16px;
+
+  @include vp-768 {
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    min-width: none;
+  }
+}
+
+.xuy {
+  @include vp-768 {
+    display: none;
+  }
+}
+
+.xuy-show {
+  @include vp-375 {
+    display: inline;
+  }
+}
+
+.footer__container-visit-title {
+  margin-bottom: 32px;
+
+  @include vp-768 {
+    font-size: 25px;
+    text-align: center;
+    padding: 0 20px;
+    padding-top: 24px;
+  }
+}
+
+.footer__container-mail-icon {
+  margin-top: 22px;
+  transition: all .3s ease-in-out;
+}
+
+.footer__container-mailto {
+  font-family: 'Georgia-400-regular';
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+  text-decoration: none;
+  margin-top: 22px;
+  transition: all .3s ease-in-out;
+}
+
+.footer__container-tel-icon {
+  margin-top: 40px;
+  transition: all .3s ease-in-out;
+}
+
+.footer__container-phone {
+  font-family: 'Georgia-400-regular';
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+  margin-top: 40px;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+.footer__container-map-icon {
+  transition: all .3s ease-in-out;
+}
+
+.footer__container-address-text {
+  margin: 0;
+  font-family: 'Georgia-400-regular';
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+.address-second {
+  margin-top: 32px;
+
+  @include vp-768 {
+    margin-top: 40px;
+    margin-left: -31px;
+  }
+}
+
+.footer__container-address-text:hover,
+.footer__container-phone:hover,
+.footer__container-mailto:hover {
+  color: $color-light-l;
+}
+
+.footer__container-footer-puppy {
+
+  @include vp-768 {
+    display: block;
+    width: 260px;
+    height: 269px;
+
+  }
+}

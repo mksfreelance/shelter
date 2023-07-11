@@ -1,0 +1,87 @@
+@import 'utils';
+@import 'fonts';
+@import 'modificators';
+
+.btn-primary {
+  font-family: 'Georgia-400-regular';
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  padding: 15px 45px;
+  background-color: $color-primary;
+  color: $color-dark-3xl;
+  border: none;
+  border-radius: 100px;
+  width: fit-content;
+  text-align: center;
+  transition: all .3s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: $color-primary-light;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  font-family: 'Georgia-400-regular';
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  padding: 15px 45px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  width: fit-content;
+  text-align: center;
+  transition: all .3s ease-in-out;
+}
+
+.pagination-btn {
+  position: absolute;
+  width: 54px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  background-color: transparent;
+  transition: all .3s ease-in-out;
+}
+
+.pagination-btn-pets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  font-family: 'Georgia-400-regular';
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $color-dark-3xl;
+  background-color: transparent;
+  transition: all .3s ease-in-out;
+}
+
+.pagination-btn:hover,
+.pagination-btn-pets:hover {
+  background-color: $color-primary-light;
+  cursor: pointer;
+}
+
+.pagination-btn:active,
+.pagination-btn-pets:active {
+  background-color: $color-primary;
+}
+
+.pagination-btn:disabled,
+.pagination-btn-pets:disabled {
+  background-color: transparent;
+  border: 2px solid $color-dark-s;
+  color: $color-dark-s;
+  pointer-events: none;
+}
+
+.current-btn {
+  background-color: $color-primary-light;
+}

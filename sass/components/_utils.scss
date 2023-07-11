@@ -1,0 +1,60 @@
+$color-black: #000000;
+$color-white: #ffffff;
+$color-primary: #f1cdb3;
+$color-primary-light: #FDDCC4;
+$color-light-s: #FAFAFA;
+$color-light-xl: #ffffff;
+$color-light-nav: #CDCDCD;
+$color-light-l: #F6F6F6;
+$color-dark-s: #CDCDCD;
+$color-dark-m: #B2B2B2;
+$color-dark-l: #545454;
+$color-dark-xl: #4C4C4C;
+$color-dark-3xl: #292929;
+
+$vp-320: 321px;
+$vp-375: 375px;
+$vp-768: 768px;
+$vp-1023: 1024px;
+$vp-1279: 1280px;
+
+@mixin vp-1023 {
+  @media (max-width:($vp-1024 - 1px)) {
+    @content;
+  }
+}
+@mixin vp-1279 {
+  @media (max-width:($vp-1279 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-768 {
+  @media (max-width:($vp-768 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-375 {
+  @media (max-width:($vp-375 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-320 {
+  @media (max-width:($vp-320 - 1px)) {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+
+  &.focus-visible:focus {
+    @content;
+  }
+}
